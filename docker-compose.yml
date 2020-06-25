@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  server:
+    container_name: chat-server
+    build: ./server/
+    ports:
+      - "3000:4000"
+
+  ui:
+    stdin_open: true
+    container_name: ui
+    build: ./ui/
+    ports:
+      - "80:3000"
+    depends_on:
+      - "server"
+
+  bot:
+    container_name: bot
+    build: ./bot/
+    depends_on:
+      - "server"

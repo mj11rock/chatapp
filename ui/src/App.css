@@ -1,0 +1,95 @@
+body {
+  background: #585858;
+}
+.App {
+  text-align: center;
+  padding: 14px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.login-wrapper,
+.chat-wrapper {
+  border: 1px solid #282c34;
+  border-radius: 8px;
+  padding: 14px;
+  width: 30%;
+  margin: 10% auto;
+  background: #898989;
+}
+input {
+  background: #898989;
+  border: 1px solid #282c34;
+  border-radius: 3px;
+  padding: 8px;
+  margin: 0 10px;
+}
+input::placeholder {
+  color: #000;
+}
+input:focus{
+  outline: none !important;
+}
+.chat-wrapper {
+  position: relative;
+  width: 40%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.btn{
+  border: none;
+  border-radius: 3px;
+  padding: 8px;
+  cursor: pointer;
+}
+.btn:enabled:hover{
+  background: #d4d3d3;
+}
+button:disabled{
+  cursor: not-allowed;
+}
+
+.username{
+  font-weight: bold;
+  color: rgb(117, 38, 38);
+  font-size: 24px;
+  margin: 5px 0;
+}
+.chat-area{
+  background: #626262;
+  margin: 10px -14px;
+  padding: 15px;
+  overflow-y: scroll;
+  height: 200px;
+}
+.chat-input{
+  position: absolute;
+  bottom: 14px;
+  width: 100%;
+}
