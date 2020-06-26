@@ -33,7 +33,7 @@ const Chat = (props) => {
     // console.log("log from effect", username, endpoint)
     if (!username || !endpoint) return
     socket = socketIOClient(endpoint)
-    console.log("socket io", socket)
+    // console.log("socket io", socket)
     socket.emit("register", username)
     // appendChatlog("system", "Welcome, " + username)
 

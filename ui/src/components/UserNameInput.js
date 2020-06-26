@@ -15,7 +15,6 @@ const UserNameInput = (props) => {
       passUsernameToHoc(userName)
     }
   }
-  // console.log(props)
   return (
     <div className="login-wrapper">
       <h3>login</h3>

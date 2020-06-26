@@ -8,16 +8,9 @@ const Chat = () => {
   const [text, textInput] = useState("")
   const [chatLog, chatUpdate] = useState([])
 
-  useEffect(() => {
-    socket.on("chatLog", (data) => {
-      console.log(data)
-      //   chatUpdate((chatLog) => [...chatLog, data])
-    })
-  }, [])
-
   function submitValue() {
     socket.emit("new_message", text)
-    console.log(text)
+    // console.log(text)
     chatUpdate((chatLog) => [...chatLog, text])
     textInput("")
   }
