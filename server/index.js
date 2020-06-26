@@ -2,7 +2,7 @@ const express = require("express")
 const http = require("http")
 const socketIo = require("socket.io")
 
-const port = process.env.PORT || 3000
+const port = 3000
 const index = require("./routes/index")
 
 const app = express()

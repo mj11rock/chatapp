@@ -1,5 +1,5 @@
 const io = require("socket.io-client")
-const ENDPOINT = "http://localhost:3000"
+const ENDPOINT = "http://chat-server:3000"
 console.log("bot started, trying to connect...")
 const socket = io(ENDPOINT, {
   reconnect: true,

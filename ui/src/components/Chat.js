@@ -30,12 +30,12 @@ const Chat = (props) => {
   )
 
   useEffect(() => {
-    console.log("log from effect", username, endpoint)
+    // console.log("log from effect", username, endpoint)
     if (!username || !endpoint) return
     socket = socketIOClient(endpoint)
     console.log("socket io", socket)
     socket.emit("register", username)
-    appendChatlog("system", "Welcome " + username)
+    // appendChatlog("system", "Welcome, " + username)
 
     socket.on("message", ({username, message}) => {
       appendChatlog(username, message)

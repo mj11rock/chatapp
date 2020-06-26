@@ -5,14 +5,14 @@ services:
     container_name: chat-server
     build: ./server/
     ports:
-      - "3000:4000"
+      - "4000:3000"
 
   ui:
     stdin_open: true
     container_name: ui
     build: ./ui/
     ports:
-      - "80:3000"
+      - "80:3006"
     depends_on:
       - "server"
 

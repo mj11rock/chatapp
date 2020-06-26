@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import "./App.css"
 import UserNameInput from "./components/UserNameInput"
 import Chat from "./components/Chat"
-const ENDPOINT = "http://localhost:3000"
+const ENDPOINT = "localhost:4000"
 
 function App() {
   const [userName, setUserName] = useState("Guest User")
